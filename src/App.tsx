@@ -36,10 +36,10 @@ const App: React.FC = () => {
   ];
 
   const [levelIndex, setLevelIndex] = useState(6);
-  const [points, setPoints] = useState(22749365);
+  const [points, setPoints] = useState(0);
   const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);
-  const pointsToAdd = 11;
-  const profitPerHour = 126420;
+  const pointsToAdd = 1;
+  const profitPerHour = 0;
 
   const [dailyRewardTimeLeft, setDailyRewardTimeLeft] = useState("");
   const [dailyCipherTimeLeft, setDailyCipherTimeLeft] = useState("");
@@ -139,7 +139,7 @@ const App: React.FC = () => {
               <Hamster size={24} className="text-[#d4d4d4]" />
             </div>
             <div>
-              <p className="text-sm">Nikandr (CEO)</p>
+              <p className="text-sm">Mindwave (CEO)</p>
             </div>
           </div>
           <div className="flex items-center justify-between space-x-4 mt-1">
@@ -163,6 +163,7 @@ const App: React.FC = () => {
                 <p className="text-xs text-[#85827d] font-medium">Profit per hour</p>
                 <div className="flex items-center justify-center space-x-1">
                   <img src={dollarCoin} alt="Dollar Coin" className="w-[18px] h-[18px]" />
+                  
                   <p className="text-sm">{formatProfitPerHour(profitPerHour)}</p>
                   <Info size={20} className="text-[#43433b]" />
                 </div>
@@ -212,10 +213,15 @@ const App: React.FC = () => {
                   <img src={mainCharacter} alt="Main Character" className="w-full h-full" />
                 </div>
               </div>
-            </div>
+
+
+              
+            </div><p className='text-center mt-10 font-semibold text-3xl'>Tap4SDGs</p> 
           </div>
         </div>
       </div>
+
+
 
       {/* Bottom fixed div */}
       <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-xl bg-[#272a2f] flex justify-around items-center z-50 rounded-3xl text-xs">
@@ -252,7 +258,7 @@ const App: React.FC = () => {
           }}
           onAnimationEnd={() => handleAnimationEnd(click.id)}
         >
-          {pointsToAdd}
+          {"🌳"}
         </div>
       ))}
     </div>
